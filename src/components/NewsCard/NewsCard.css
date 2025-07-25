@@ -57,7 +57,6 @@
   white-space: nowrap;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   transition: opacity 0.3s ease-in-out;
-  pointer-events: none;
 }
 
 .tooltip-container:hover .tooltip-text {
@@ -151,6 +150,7 @@
   height: 19px;
   border: 2px solid transparent;
   transition: border-color 0.3s ease;
+  pointer-events: none;
 }
 
 .tooltip-icon:hover {

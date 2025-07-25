@@ -172,7 +172,9 @@ function App() {
       publishedAt: article.publishedAt,
       source: { name: article.source?.name || article.source },
       urlToImage: article.urlToImage,
+      url: article.url,
     };
+    console.log("📝 Trying to save article:", cleanedArticle);
 
     saveArticle(token, cleanedArticle)
       .then((saved) => setSavedArticles((prev) => [...prev, saved]))

@@ -29,6 +29,7 @@ function NewsCard({
     : "Save article";
 
   const handleClick = () => {
+    console.log("handleClick fired", { isSavedPage, isLoggedIn, isSaved });
     if (!isLoggedIn && !isSavedPage) {
       onUnauthClick();
       return;
@@ -37,10 +38,7 @@ function NewsCard({
     if (isSavedPage && isOwner) {
       onDelete(article);
     } else if (!isSavedPage && isLoggedIn) {
-      if (!isSaved) {
-        onSave(article);
-      }
-      // If already saved, do nothing
+      onSave(article);
     }
   };
 

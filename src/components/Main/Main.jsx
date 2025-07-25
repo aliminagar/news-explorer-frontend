@@ -63,6 +63,7 @@ function Main({
             isSavedPage={false}
             isLoggedIn={isLoggedIn}
             savedArticles={savedArticles}
+            onSave={onSave}
             onDelete={onDelete}
             onUnauthClick={onUnauthClick}
           />
