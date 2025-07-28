@@ -43,7 +43,7 @@
   right: -26px;
   width: 22px;
   height: 22px;
-  background: url(../../assets/icons/Close-Icon-white.svg);
+  background: url(../../assets/project-icons/Close-Icon-white.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -230,7 +230,7 @@
     width: 100%;
     height: 100vh;
     display: flex;
-    align-items: center; /* ✅ Change from 'flex-end' to 'center' */
+    align-items: center; /*Change from 'flex-end' to 'center' */
     justify-content: center; /* Just in case */
     z-index: 999;
   }

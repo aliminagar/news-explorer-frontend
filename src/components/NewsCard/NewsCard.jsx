@@ -13,7 +13,6 @@ function NewsCard({
   onDelete,
   isSaved,
   onUnauthClick,
-  savedArticles = [],
 }) {
   const currentUser = useContext(CurrentUserContext);
   const isOwner = article.owner === currentUser?._id;
@@ -29,7 +28,6 @@ function NewsCard({
     : "Save article";
 
   const handleClick = () => {
-    console.log("handleClick fired", { isSavedPage, isLoggedIn, isSaved });
     if (!isLoggedIn && !isSavedPage) {
       onUnauthClick();
       return;

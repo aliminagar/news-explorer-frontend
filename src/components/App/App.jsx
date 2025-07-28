@@ -210,7 +210,7 @@ function App() {
               <>
                 <div className="intro-background">
                   <Header
-                    isSavedNews={false}
+                    isSavedNews={isSavedNews}
                     isLoggedIn={isLoggedIn}
                     currentUser={currentUser}
                     onLogin={() => setActiveModal("login")}

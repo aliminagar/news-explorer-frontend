@@ -1,15 +1,13 @@
 // src/utils/stubApi.js
 
-import mockSavedArticles from "./mockSavedArticles.js";
-
 // In-memory storage for saved articles
-let savedArticlesStorage = [...mockSavedArticles];
+let savedArticlesStorage = [];
 
-export const authorize = (email, password) => {
+export const authorize = () => {
   return Promise.resolve({ token: "mock-token" });
 };
 
-export const checkToken = (token) => {
+export const checkToken = () => {
   return Promise.resolve({
     _id: "fake-user-id",
     name: "Mock User",
@@ -17,11 +15,11 @@ export const checkToken = (token) => {
   });
 };
 
-export const signup = (name, email, password) => {
+export const signup = () => {
   return Promise.resolve({ message: "Signup successful" });
 };
 
-export const getSavedArticles = (token) => {
+export const getSavedArticles = () => {
   return Promise.resolve([...savedArticlesStorage]);
 };
 

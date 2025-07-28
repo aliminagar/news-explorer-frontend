@@ -1,6 +1,6 @@
-import { useContext } from "react";
-import CurrentUserContext from "../../contexts/CurrentUserContext";
 import NewsCard from "../NewsCard/NewsCard";
+import "./NewsCardList.css";
+import CurrentUserContext from "../../contexts/CurrentUserContext";
 import "./NewsCardList.css";
 
 function NewsCardList({
@@ -15,8 +15,6 @@ function NewsCardList({
   showTitle = false,
   onUnauthClick,
 }) {
-  const currentUser = useContext(CurrentUserContext);
-
   const isArticleSaved = (article) =>
     savedArticles.some(
       (a) =>
@@ -45,7 +43,7 @@ function NewsCardList({
               onSave={onSave}
               onDelete={onDelete}
               isSaved={isArticleSaved(article)}
-              savedArticles={savedArticles} //
+              savedArticles={savedArticles} // ✅ Add this prop
               onUnauthClick={onUnauthClick}
             />
           ))}
