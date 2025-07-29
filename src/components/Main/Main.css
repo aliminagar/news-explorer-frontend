@@ -1,0 +1,28 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: auto;
+}
+
+.results-section {
+  background-color: #fff;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .search-section__title {
+    padding: 0 48px;
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .results-section {
+    padding: 40px 16px 48px;
+  }
+
+  .search-section__title {
+    padding: 0 24px;
+    font-size: 22px;
+  }
+}
