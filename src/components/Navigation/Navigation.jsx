@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
 import CurrentUserContext from "../../contexts/CurrentUserContext";
 import logoutIcon from "../../assets/project-icons/logout-icon.svg";
