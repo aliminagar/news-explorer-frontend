@@ -5,9 +5,12 @@ import "./vendor/normalize.css";
 import "./index.css";
 import App from "./components/App/App.jsx";
 
+// Use basename only in production (GitHub Pages)
+const basename = import.meta.env.PROD ? "/news-explorer-frontend" : "/";
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <App />
     </BrowserRouter>
   </StrictMode>
